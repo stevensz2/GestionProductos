@@ -54,23 +54,35 @@
 </head>
 <body>
     <div class="contenedor">
-        <h2>Resultado del registro</h2>
+        <h2>Producto guardado con éxito</h2>
         <table>
             <tr>
-                <td class="etiqueta">Nombre del producto:</td>
-                <td>${nombre}</td>
+                <td class="etiqueta">Código:</td>
+                <td>${producto.codigo}</td>
             </tr>
             <tr>
-                <td class="etiqueta">Precio unitario:</td>
-                <td>$${precio}</td>
+                <td class="etiqueta">Nombre:</td>
+                <td>${producto.nombre}</td>
             </tr>
             <tr>
-                <td class="etiqueta">Cantidad:</td>
-                <td>${cantidad}</td>
+                <td class="etiqueta">Descripción:</td>
+                <td>${producto.descripcion}</td>
             </tr>
             <tr>
-                <td class="etiqueta">Total:</td>
-                <td class="total">$${total}</td>
+                <td class="etiqueta">Precio de compra:</td>
+                <td>$${producto.precioCompra}</td>
+            </tr>
+            <tr>
+                <td class="etiqueta">Precio de venta:</td>
+                <td>$${producto.precioVenta}</td>
+            </tr>
+            <tr>
+                <td class="etiqueta">Stock actual:</td>
+                <td>${producto.stockActual}</td>
+            </tr>
+            <tr>
+                <td class="etiqueta">Stock mínimo:</td>
+                <td>${producto.stockMinimo}</td>
             </tr>
         </table>
         <a href="formulario.html">&larr; Registrar otro producto</a>
