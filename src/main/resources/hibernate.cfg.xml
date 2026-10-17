@@ -9,7 +9,11 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">vivacristoreY12345.</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.hbm2ddl.auto">validate</property>
+    <!-- "update" crea la tabla si no existe y la ajusta si faltan columnas;
+         evita que la aplicación falle al iniciar cuando la BD está vacía.
+         Si ya tienes la tabla creada manualmente y quieres máxima seguridad,
+         puedes cambiarlo de nuevo a "validate". -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
     <property name="show_sql">true</property>
     <mapping class="com.gestionproductos.model.Producto"/>
   </session-factory>
